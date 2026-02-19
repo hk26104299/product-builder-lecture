@@ -1,37 +1,38 @@
-# Lotto Number Generator - AdSense Optimized Version
+# Lotto Generator Pro - High-Quality & AdSense Compliant
 
 ## Overview
 
-This project is a high-quality, professional lottery number generator designed to meet Google AdSense approval standards. It focuses on providing unique value through a combination of a robust utility and comprehensive educational content.
+Lotto Generator Pro is a premium web utility designed for lottery number generation with a strong focus on user value, transparency, and responsible gaming. This project adheres to the highest standards of Google AdSense approval guidelines by providing original, informative, and structured content alongside its core functionality.
 
 ## Design and Features
 
-### Professional Aesthetic (UX/UI)
+### User-Centric & Informative Content
 
-*   **Modern Glassmorphism:** Uses a premium, clean layout with blurred backgrounds and high-quality gradients.
-*   **Dual Theme Support:** Fully responsive light and dark modes with persistent memory.
-*   **Refined Typography:** Optimized for readability with a clear information hierarchy using the 'Pretendard' font family.
-*   **Staggered Animations:** Smooth, non-intrusive entrance animations for all components.
+*   **Comprehensive FAQ Section:** Addresses common user queries about lottery probability, taxes, and service functionality to increase engagement and provide immediate value.
+*   **Responsible Gambling Guide:** Promotes healthy gaming habits and provides resources for professional counseling, enhancing the site's ethical standing and credibility.
+*   **Statistical Education:** Provides users with insights into "True Randomness" and statistical biases (e.g., the 1-31 birthday bias), educating the user beyond simple number generation.
+*   **Detailed "About" Section:** Transparently explains the development philosophy and technical implementation (Web Components) to build user trust.
 
-### High-Quality Content (AdSense Optimization)
+### Visual Design & UX
 
-*   **Educational Context:** Includes detailed sections on lottery probability, selection biases (avoiding 1-31 birthday bias), and random number generation logic.
-*   **Expert Tips:** Provides statistical advice (High/Low ratio, Odd/Even balance) to increase user engagement and value.
-*   **Usage Instructions:** Clear, step-by-step guidance on how to use the 3-set generation feature.
+*   **Professional Aesthetic:** High-end glassmorphism design with a consistent, readable information hierarchy.
+*   **Adaptive Theme System:** Seamlessly toggles between dark and light modes, persisting user preferences across sessions.
+*   **Mobile-First Response:** Optimized for a flawless experience across all devices, ensuring fast loading and clear navigation.
 
-### Technical & Trust Features
+### Technical & SEO Excellence
 
-*   **SEO Optimization:** Custom meta tags (title, description, keywords), canonical URL, and Open Graph data for search engine visibility.
-*   **Trust Indicators:** Professional footer with links to Privacy Policy, Terms of Service, and About Us sections.
-*   **Monetization Ready:** Pre-integrated Google AdSense script in the `<head>` section.
-*   **Communication:** Integrated Formspree for professional inquiries and Disqus for user community engagement.
+*   **Search Engine Optimized:** Advanced meta-tagging, canonical links, and Open Graph data for maximum discoverability.
+*   **No doorway pages:** Consolidates all valuable information into a single, high-performing page, avoiding redundant or thin-content pages.
+*   **Structured UI:** A clear, logical flow from the primary utility to supporting information, then to community (comments) and contact sections.
 
-### Core Utility
+### Monetization & Trust
 
-*   **Triple Set Generation:** A custom web component (`<lotto-generator>`) that generates 3 independent sets of 6 unique numbers (1-45) using a secure random logic.
+*   **AdSense Ready:** Script pre-integrated into the `<head>` tag, with content specifically structured to complement ad placement without overwhelming the user.
+*   **Legal Compliance:** Includes placeholder links for Privacy Policy and Terms of Service, signaling a professional and compliant operation to AdSense reviewers.
+*   **Communication Channels:** Direct partnership inquiry form (Formspree) and interactive user comments (Disqus).
 
 ## Implementation Details
 
-*   **Framework-less:** Built using pure HTML5, CSS3 (Modern Baseline), and ES6+ JavaScript.
-*   **Component Architecture:** Encapsulated logic within Custom Elements for clean, maintainable code.
-*   **Performance:** No heavy external dependencies; optimized for instant loading and high Lighthouse scores.
+*   **Architecture:** Vanilla JavaScript with Custom Elements for modular, framework-less efficiency.
+*   **Styling:** Modern CSS Baseline features, including custom properties, backdrop-filters, and CSS grid/flexbox for robust layouts.
+*   **Privacy:** A strictly client-side application that respects user privacy by not storing personal data.
