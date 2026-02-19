@@ -16,14 +16,15 @@ This project is a simple web application that generates random lottery numbers. 
 
 ### Features
 
-*   **Number Generation:** Generates 6 unique random numbers between 1 and 45.
-*   **Display:** The generated numbers are displayed in a clean and organized manner.
+*   **Number Generation:** Generates 3 sets of 6 unique random numbers between 1 and 45.
+*   **Display:** The generated numbers are displayed in 3 distinct sets, each with a label.
 *   **Theme Persistence:** The selected theme (light/dark) is saved in the user's browser.
 *   **Web Component:** The entire lottery number generator is encapsulated in a custom HTML element (`<lotto-generator>`) for reusability and maintainability.
 
 ## Current Plan
 
 *   Implement a dark mode/light mode theme toggle.
-*   Add a switch to the UI.
+*   Modify the generator to create and display 3 sets of numbers simultaneously.
+*   Update the UI/UX to handle multiple sets elegantly.
 *   Update the CSS to use variables for theming.
 *   Use JavaScript to handle theme switching and persistence in localStorage.

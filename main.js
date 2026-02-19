@@ -17,11 +17,12 @@ class LottoGenerator extends HTMLElement {
         const title = document.createElement('h2');
         title.textContent = 'Lotto Number Generator';
 
-        const numbersContainer = document.createElement('div');
-        numbersContainer.setAttribute('class', 'numbers');
+        // Container for multiple sets
+        const setsContainer = document.createElement('div');
+        setsContainer.setAttribute('class', 'sets-container');
 
         const button = document.createElement('button');
-        button.textContent = 'Generate';
+        button.textContent = 'Generate 3 Sets';
         button.setAttribute('id', 'generate-btn');
 
         const style = document.createElement('style');
@@ -39,6 +40,8 @@ class LottoGenerator extends HTMLElement {
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 position: relative;
                 transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                max-width: 500px;
+                width: 90vw;
             }
             .theme-toggle {
                 position: absolute;
@@ -66,23 +69,44 @@ class LottoGenerator extends HTMLElement {
                 letter-spacing: -0.5px;
                 transition: color 0.4s ease;
             }
+            .sets-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            .lotto-set {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .set-label {
+                font-size: 0.8rem;
+                color: var(--text-color, white);
+                opacity: 0.6;
+                text-align: left;
+                margin-left: 0.5rem;
+            }
             .numbers {
                 display: flex;
-                gap: 0.75rem;
-                margin-bottom: 2rem;
+                gap: 0.5rem;
                 justify-content: center;
                 flex-wrap: wrap;
             }
             .number {
-                width: 50px;
-                height: 50px;
+                width: 42px;
+                height: 42px;
                 border-radius: 50%;
                 background: var(--number-background, white);
                 color: var(--number-color, black);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.25rem;
+                font-size: 1.1rem;
                 font-weight: bold;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                 animation: popIn 0.3s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;
@@ -119,7 +143,7 @@ class LottoGenerator extends HTMLElement {
         shadow.appendChild(wrapper);
         wrapper.appendChild(themeToggle);
         wrapper.appendChild(title);
-        wrapper.appendChild(numbersContainer);
+        wrapper.appendChild(setsContainer);
         wrapper.appendChild(button);
 
         // Theme management
@@ -133,20 +157,38 @@ class LottoGenerator extends HTMLElement {
         });
 
         const generateNumbers = () => {
-            const numbers = new Set();
-            while (numbers.size < 6) {
-                numbers.add(Math.floor(Math.random() * 45) + 1);
-            }
-            numbersContainer.innerHTML = '';
-            const sortedNumbers = Array.from(numbers).sort((a,b) => a-b);
+            setsContainer.innerHTML = '';
             
-            sortedNumbers.forEach((number, index) => {
-                const numberElement = document.createElement('div');
-                numberElement.setAttribute('class', 'number');
-                numberElement.style.animationDelay = `${index * 0.05}s`;
-                numberElement.textContent = number;
-                numbersContainer.appendChild(numberElement);
-            });
+            for (let i = 0; i < 3; i++) {
+                const setWrapper = document.createElement('div');
+                setWrapper.setAttribute('class', 'lotto-set');
+                
+                const label = document.createElement('div');
+                label.setAttribute('class', 'set-label');
+                label.textContent = `Set ${i + 1}`;
+                
+                const numbersDiv = document.createElement('div');
+                numbersDiv.setAttribute('class', 'numbers');
+                
+                const numbers = new Set();
+                while (numbers.size < 6) {
+                    numbers.add(Math.floor(Math.random() * 45) + 1);
+                }
+                const sortedNumbers = Array.from(numbers).sort((a,b) => a-b);
+                
+                sortedNumbers.forEach((number, index) => {
+                    const numberElement = document.createElement('div');
+                    numberElement.setAttribute('class', 'number');
+                    // Stagger the animation across sets as well
+                    numberElement.style.animationDelay = `${(i * 6 + index) * 0.03}s`;
+                    numberElement.textContent = number;
+                    numbersDiv.appendChild(numberElement);
+                });
+                
+                setWrapper.appendChild(label);
+                setWrapper.appendChild(numbersDiv);
+                setsContainer.appendChild(setWrapper);
+            }
         };
 
         button.addEventListener('click', generateNumbers);
