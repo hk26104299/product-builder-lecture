@@ -1,9 +1,32 @@
+:root {
+    --background-gradient: linear-gradient(to right, #6a11cb, #2575fc);
+    --card-background: rgba(255, 255, 255, 0.1);
+    --text-color: white;
+    --button-background: #ff6b6b;
+    --button-hover-background: #ff8e8e;
+    --button-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+    --number-background: white;
+    --number-color: black;
+}
+
+[data-theme="dark"] {
+    --background-gradient: linear-gradient(to right, #232526, #414345);
+    --card-background: rgba(0, 0, 0, 0.2);
+    --text-color: white;
+    --button-background: #8e44ad;
+    --button-hover-background: #9b59b6;
+    --button-shadow: 0 0 10px #8e44ad, 0 0 20px #8e44ad;
+    --number-background: #333;
+    --number-color: white;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: var(--background-gradient);
     font-family: sans-serif;
     margin: 0;
+    transition: background 0.3s ease;
 }
