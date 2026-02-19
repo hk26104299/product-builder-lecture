@@ -20,6 +20,7 @@ This project is a simple web application that generates random lottery numbers. 
 *   **Display:** The generated numbers are displayed in 3 distinct sets, each with a label.
 *   **Theme Persistence:** The selected theme (light/dark) is saved in the user's browser.
 *   **Affiliation Inquiry Form:** A simple contact form integrated with Formspree for partnership requests.
+*   **Comments Section:** Integrated Disqus for user feedback and discussions.
 *   **Web Component:** The entire lottery number generator is encapsulated in a custom HTML element (`<lotto-generator>`) for reusability and maintainability.
 
 ## Current Plan
@@ -27,6 +28,7 @@ This project is a simple web application that generates random lottery numbers. 
 *   Implement a dark mode/light mode theme toggle.
 *   Modify the generator to create and display 3 sets of numbers simultaneously.
 *   Add a partnership inquiry form using Formspree.
+*   Integrate Disqus comments at the bottom of the page.
 *   Update the UI/UX to handle multiple components elegantly.
 *   Update the CSS to use variables for theming.
 *   Use JavaScript to handle theme switching and persistence in localStorage.
