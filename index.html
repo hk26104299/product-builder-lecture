@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>로또 번호 생성기 | 3개 세트 번호 추천 & 통계 기반 추천 서비스</title>
+    <meta name="description" content="고도의 난수 생성 알고리즘을 활용한 로또 번호 생성기입니다. 한 번에 3개 세트의 번호를 추천받고, 다크 모드 지원 및 세련된 디자인의 UI를 경험해보세요.">
+    <meta name="keywords" content="로또번호생성기, 로또번호추천, 로또, 로또6/45, 무작위번호생성, 로또통계, 로또자동">
+    <link rel="canonical" href="https://productbuilder-lmkczlarnc.web.app/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://productbuilder-lmkczlarnc.web.app/">
+    <meta property="og:title" content="로또 번호 생성기 | 3개 세트 번호 추천">
+    <meta property="og:description" content="고도의 난수 생성 알고리즘을 활용한 로또 번호 생성기입니다.">
+    
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6547651780285568"
      crossorigin="anonymous"></script>
@@ -15,10 +25,50 @@
 </head>
 <body>
     <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1>로또 번호 생성기</h1>
+            <p>당신의 행운을 위한 최적의 조합을 지금 바로 확인하세요. 3개 세트 동시 생성을 지원합니다.</p>
+        </header>
+
+        <!-- Generator Component -->
         <lotto-generator></lotto-generator>
         
+        <!-- Educational Content Section for AdSense Quality -->
+        <section class="info-section">
+            <h2>로또 번호 생성기 활용 가이드</h2>
+            <p>저희 로또 번호 생성기는 사용자가 번호를 선택할 때 발생할 수 있는 '선택 편향'을 제거하기 위해 설계되었습니다. 많은 사람들이 생일, 기념일 등 특정 범위의 숫자(1~31)를 선호하는 경향이 있지만, 수학적으로 모든 숫자의 당첨 확률은 동일합니다.</p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>왜 3개 세트인가요?</h3>
+                    <p>한 번의 클릭으로 3가지 다른 조합을 제공하여 사용자가 다양한 가능성을 검토할 수 있도록 돕습니다. 여러 조합을 비교하며 직관적으로 끌리는 번호를 선택해보세요.</p>
+                </div>
+                <div class="info-item">
+                    <h3>난수 생성 알고리즘</h3>
+                    <p>자바스크립트의 고도화된 <code>Math.random()</code> 함수와 중복 제거 로직을 결합하여, 1부터 45 사이의 숫자를 완벽하게 무작위로 추출합니다.</p>
+                </div>
+                <div class="info-item">
+                    <h3>다양한 테마 지원</h3>
+                    <p>사용자의 눈 건강을 위해 다크 모드와 라이트 모드를 모두 지원합니다. 우측 상단의 아이콘을 통해 언제든 선호하는 화면 모드로 전환할 수 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="info-section">
+            <h2>로또 당첨을 위한 소소한 팁</h2>
+            <p>로또는 확률의 게임입니다. 번호를 선택할 때 참고하면 좋은 통계적 아이디어들을 소개합니다.</p>
+            <ul>
+                <li><strong>고저 비율 조절:</strong> 1~22(낮은 수)와 23~45(높은 수)를 적절히 섞는 것이 좋습니다.</li>
+                <li><strong>홀짝 균형:</strong> 홀수와 짝수의 비율을 3:3 또는 2:4로 맞추는 조합이 자주 출현합니다.</li>
+                <li><strong>연속 번호 피하기:</strong> 1, 2, 3처럼 3개 이상의 숫자가 연속되는 경우는 확률적으로 낮습니다.</li>
+            </ul>
+        </section>
+
+        <!-- Partnership Form -->
         <div class="contact-card">
-            <h3>제휴 문의</h3>
+            <h3>비즈니스 및 제휴 문의</h3>
             <form action="https://formspree.io/f/mgolzgan" method="POST">
                 <div class="form-group">
                     <label for="email">이메일 주소</label>
@@ -26,25 +76,17 @@
                 </div>
                 <div class="form-group">
                     <label for="message">문의 내용</label>
-                    <textarea name="message" id="message" rows="4" placeholder="문의하실 내용을 입력해주세요." required></textarea>
+                    <textarea name="message" id="message" rows="4" placeholder="제휴 또는 건의사항을 남겨주세요." required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">문의하기</button>
             </form>
         </div>
 
+        <!-- Disqus Section -->
         <div class="comments-card">
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://productbuilder-lmkczlarnc.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
@@ -54,6 +96,20 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
     </div>
+
+    <!-- Professional Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#about">서비스 소개</a>
+            <a href="#privacy">개인정보처리방침</a>
+            <a href="#terms">이용약관</a>
+            <a href="#contact">고객지원</a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Lotto Generator Pro. All rights reserved.
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
